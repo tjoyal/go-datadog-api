@@ -32,12 +32,12 @@ type Metric struct {
 // A metric is characterized by 2 units as: x per y
 // One or both could be missing
 type Unit struct {
-	Family string
-	ScaleFactor float32
-	Name string
-	ShortName string
-	Plural string
-	Id int
+	Family string       `json:"family"`
+	ScaleFactor float32 `json:"scale_factor"`
+	Name string         `json:"name"`
+	ShortName string    `json:"short_name"`
+	Plural string       `json:"plural"`
+	Id int              `json:"id"`
 }
 
 // Series represents a collection of data points we get when we query for timeseries data
